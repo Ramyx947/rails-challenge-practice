@@ -6,5 +6,5 @@ class Office < ApplicationRecord
   belongs_to :building
 
 #validation
-  validates :building, :uniqueness => { :scope => :company_id }
+  # validates :building, :uniqueness => { :scope => :company_id }
 end

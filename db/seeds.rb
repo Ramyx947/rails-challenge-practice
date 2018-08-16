@@ -55,44 +55,50 @@ titles = [
   )
 end
 # create the seeds for the offices table
+######### for Broadway building
 Office.create(
     building: Building.find_by(name: "Broadway"),
     company: Company.find_by(name: "Microsoft"),
     floor: 1
     )
+
+Office.create(
+    building: Building.find_by(name: "Broadway"),
+    company: Company.find_by(name: "Microsoft"),
+    floor: 2
+    )
+
+Office.create(
+  building: Building.find_by(name: "Broadway"),
+  company: Company.find_by(name: "Green Peace"),
+  floor: 3
+  )
+
+###########for Chelsea HQ building
 Office.create(
     building: Building.find_by(name: "Chelsea HQ"),
     company: Company.find_by(name: "Blue Apron"),
+    floor: 1
+    )
+Office.create(
+    building: Building.find_by(name: "Chelsea HQ"),
+    company: Company.find_by(name: "Flatiron"),
     floor: 2
     )
 Office.create(
-      building: Building.find_by(name: "Broadway"),
-      company: Company.find_by(name: "Microsoft"),
-      floor: 3
-      )
-Office.create(
-      building: Building.find_by(name: "Broadway"),
-      company: Company.find_by(name: "Green Peace"),
-      floor: 4
-      )
+    building: Building.find_by(name: "Chelsea HQ"),
+    company: Company.find_by(name: "Inc'd Comics"),
+    floor: 3
+    )
 
+###########for FP building
   Office.create(
-      building: Building.find_by(name: "Finsbury Pavement"),
-      company: Company.find_by(name: "FinFund LLC"),
-      floor: 5
-      )
+    building: Building.find_by(name: "Finsbury Pavement"),
+    company: Company.find_by(name: "FinFund LLC"),
+    floor: 1
+    )
 Office.create(
-      building: Building.find_by(name: "Finsbury Pavement"),
-      company: Company.find_by(name: "Dog the Bounty Hunter LLC"),
-      floor: 6
-      )
-Office.create(
-      building: Building.find_by(name: "Chelsea HQ"),
-      company: Company.find_by(name: "Flatiron"),
-      floor: 7
-      )
-Office.create(
-      building: Building.find_by(name: "Chelsea HQ"),
-      company: Company.find_by(name: "Inc'd Comics"),
-      floor: 8
-      )
+    building: Building.find_by(name: "Finsbury Pavement"),
+    company: Company.find_by(name: "Dog the Bounty Hunter LLC"),
+    floor: 2
+    )
