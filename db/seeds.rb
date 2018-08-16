@@ -1,18 +1,18 @@
 weworks = [
-  {name: "Finsbury Pavement", 
-   country: "UK", 
+  {name: "Finsbury Pavement",
+   country: "UK",
    address: "131 Finsbury Pavement",
    rent_per_floor: 18000,
    number_of_floors: 8
-  }, 
-  {name: "Chelsea HQ", 
-   country: "US", 
+  },
+  {name: "Chelsea HQ",
+   country: "US",
    address: "29 West 28th Street",
    rent_per_floor: 20000,
    number_of_floors: 20
-  }, 
-  {name: "Broadway", 
-   country: "US", 
+  },
+  {name: "Broadway",
+   country: "US",
    address: "85 Broadway",
    rent_per_floor: 25000,
    number_of_floors: 6
@@ -47,11 +47,52 @@ titles = [
   "Instructor"
 ]
 
-100.times do 
+100.times do
   Employee.create(
     name: Faker::Name.name_with_middle,
     title: titles.sample,
     company: Company.all.sample
   )
 end
+# create the seeds for the offices table
+Office.create(
+    building: Building.find_by(name: "Broadway"),
+    company: Company.find_by(name: "Microsoft"),
+    floor: 1
+    )
+Office.create(
+    building: Building.find_by(name: "Chelsea HQ"),
+    company: Company.find_by(name: "Blue Apron"),
+    floor: 2
+    )
+Office.create(
+      building: Building.find_by(name: "Broadway"),
+      company: Company.find_by(name: "Microsoft"),
+      floor: 3
+      )
+Office.create(
+      building: Building.find_by(name: "Broadway"),
+      company: Company.find_by(name: "Green Peace"),
+      floor: 4
+      )
 
+  Office.create(
+      building: Building.find_by(name: "Finsbury Pavement"),
+      company: Company.find_by(name: "FinFund LLC"),
+      floor: 5
+      )
+Office.create(
+      building: Building.find_by(name: "Finsbury Pavement"),
+      company: Company.find_by(name: "Dog the Bounty Hunter LLC"),
+      floor: 6
+      )
+Office.create(
+      building: Building.find_by(name: "Chelsea HQ"),
+      company: Company.find_by(name: "Flatiron"),
+      floor: 7
+      )
+Office.create(
+      building: Building.find_by(name: "Chelsea HQ"),
+      company: Company.find_by(name: "Inc'd Comics"),
+      floor: 8
+      )

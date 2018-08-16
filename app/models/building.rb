@@ -1,7 +1,10 @@
 class Building < ApplicationRecord
+  #define relationships
 has_many :offices
 has_many :companies, through: :offices
 
+# validation
+validates :name, { presence: true, uniqueness: true }
   def number_of_floors_available
     # Will not work until relationships and schema are corretly setup
 
